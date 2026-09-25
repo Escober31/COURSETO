@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses — COURSETO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+</head>
+<body class="wallpaper-bg">
+
+  <!-- Main App Window Frame matching MY COURSE page.png -->
+  <div class="app-container">
+    
+    <!-- Left Sidebar -->
+    <aside class="app-sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <img src="assets/logo.jpg" alt="COURSETO Logo" class="sidebar-logo-img">
+          <span class="sidebar-brand-name">COURSETO</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main Navigation">
+          <a href="dashboard.html" class="sidebar-link btn-hover-lift">
+            <span>Dashboard</span>
+          </a>
+          <!-- Active on this page -->
+          <a href="my-courses.html" class="sidebar-link active btn-hover-lift">
+            <span>My Courses</span>
+          </a>
+          <a href="browse-courses.html" class="sidebar-link btn-hover-lift">
+            <span>Browse Courses</span>
+          </a>
+          <a href="schedule.html" class="sidebar-link btn-hover-lift">
+            <span>Schedule</span>
+          </a>
+          <a href="messages.html" class="sidebar-link btn-hover-lift">
+            <span>Messages</span>
+          </a>
+          <a href="certificates.html" class="sidebar-link btn-hover-lift">
+            <span>Certificates</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <button type="button" class="sidebar-logout-btn action-logout btn-hover-lift" title="Log out of your account">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <div class="app-main">
+      
+      <!-- Top Header matching MY COURSE page.png -->
+      <header class="app-header">
+        <div>
+          <!-- Dynamic greeting: "Course Of: (Nick Name of the User)" -->
+          <h1 id="myCoursesHeaderTitle" class="header-greeting-title">Course Of: Student</h1>
+        </div>
+
+        <div class="header-right">
+          <!-- Notification Bell -->
+          <button type="button" id="notificationBell" class="notification-bell btn-hover-lift" aria-label="Notifications" title="Notifications">
+            <svg class="bell-icon-svg" viewBox="0 0 24 24">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+            <span class="notification-badge"></span>
+          </button>
+
+          <!-- Circular User Avatar with First Letter of Nickname -->
+          <div class="user-avatar-container">
+            <div id="userAvatar" class="user-avatar btn-hover-lift" role="button" aria-haspopup="true" aria-expanded="false" title="Account Menu">
+              S
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div id="userMenuDropdown" class="user-menu-dropdown">
+              <div class="user-menu-header">
+                <div id="menuUserName" class="user-menu-name">Sarah</div>
+                <div id="menuUserEmail" class="user-menu-email">sarah@example.com</div>
+              </div>
+              <a href="dashboard.html" class="user-menu-item">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+              </a>
+              <a href="#settings" class="user-menu-item" onclick="alert('Account settings feature coming soon.'); return false;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                Settings
+              </a>
+              <button type="button" class="user-menu-item logout-action action-logout">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main My Courses Content Area matching MY COURSE page.png -->
+      <main class="my-courses-body">
+        
+        <!-- Left Featured Course Card -->
+        <article class="featured-course-card">
+          <div>
+            <div class="featured-header-row">
+              <img src="assets/web-dev-illustration.jpg" alt="Web Development" class="featured-illus">
+              <div class="featured-header-text">
+                <h2 class="featured-course-title">Web Development Fundamentals</h2>
+                <p class="featured-course-desc">
+                  Learn HTML, CSS, JavaScript and the basics of web development.
+                </p>
+              </div>
+            </div>
+
+            <div class="featured-info-block">
+              <div class="featured-instructor">Instructor: John Smith</div>
+              <div class="featured-progress-label">Progress</div>
+
+              <div class="featured-progress-bar-row">
+                <div class="progress-track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width: 72%;"></div>
+                </div>
+                <span class="progress-percentage">72%</span>
+              </div>
+
+              <div class="featured-lesson-count">8 of 12 lessons completed</div>
+            </div>
+          </div>
+
+          <div class="featured-footer-row">
+            <span class="featured-last-access">Last accessed: September 25, 2026</span>
+            <button type="button" class="btn-primary btn-hover-lift action-continue-lesson">
+              Continue
+            </button>
+          </div>
+        </article>
+
+        <!-- Right Side Courses Column (Python Basics, UI/UX Design) -->
+        <div class="side-courses-col">
+          
+          <!-- Card 1: Python Basics -->
+          <article class="side-course-card">
+            <div class="side-course-icon" title="Python">
+              <svg width="42" height="42" viewBox="0 0 128 128">
+                <path fill="#387EB8" d="M63.4 3.7c-29.2 0-27.4 12.7-27.4 12.7l.1 13.1h27.9v3.9H25s-18.7 2.1-18.7 27.2c0 25.1 16.3 24.2 16.3 24.2h9.7v-13.6s-.5-16.3 16-16.3h27.3s15.5.3 15.5-15V19.1s2.4-15.4-27.7-15.4zm-15 8.7c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5z"/>
+                <path fill="#FFE052" d="M64.6 124.3c29.2 0 27.4-12.7 27.4-12.7l-.1-13.1H64v-3.9h38.9s18.7-2.1 18.7-27.2c0-25.1-16.3-24.2-16.3-24.2h-9.7v13.6s.5 16.3-16 16.3H52.3s-15.5-.3-15.5 15v20.8s-2.4 15.4 27.8 15.4zm15-8.7c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
+              </svg>
+            </div>
+            <h3 class="side-course-title">Python Basics</h3>
+            
+            <div class="course-mini-progress-row">
+              <div class="progress-track-sm" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 35%;"></div>
+              </div>
+              <span class="progress-percentage-sm">35%</span>
+            </div>
+
+            <button type="button" class="btn-primary btn-hover-lift action-view-course" data-course="Python Basics" style="width: 100%; height: 38px; font-size: 13px; padding: 0;">
+              View Course
+            </button>
+          </article>
+
+          <!-- Card 2: UI/UX Design -->
+          <article class="side-course-card">
+            <div class="side-course-icon" title="UI/UX">
+              <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+                <rect width="100" height="100" rx="20" fill="#f8fafc"/>
+                <text x="18" y="65" font-family="'Poppins', sans-serif" font-weight="800" font-size="44" fill="#0284c7">U</text>
+                <text x="50" y="65" font-family="'Poppins', sans-serif" font-weight="800" font-size="44" fill="#8b5cf6">X</text>
+              </svg>
+            </div>
+            <h3 class="side-course-title">UI/UX Design</h3>
+            
+            <div class="course-mini-progress-row">
+              <div class="progress-track-sm" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 53%;"></div>
+              </div>
+              <span class="progress-percentage-sm">53%</span>
+            </div>
+
+            <button type="button" class="btn-primary btn-hover-lift action-view-course" data-course="UI/UX Design" style="width: 100%; height: 38px; font-size: 13px; padding: 0;">
+              View Course
+            </button>
+          </article>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/my-courses.js"></script>
+</body>
+</html>

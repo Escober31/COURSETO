@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Courses — COURSETO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+</head>
+<body class="wallpaper-bg">
+
+  <div class="app-container">
+    <!-- Left Sidebar -->
+    <aside class="app-sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <img src="assets/logo.jpg" alt="COURSETO Logo" class="sidebar-logo-img">
+          <span class="sidebar-brand-name">COURSETO</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main Navigation">
+          <a href="dashboard.html" class="sidebar-link btn-hover-lift">
+            <span>Dashboard</span>
+          </a>
+          <a href="my-courses.html" class="sidebar-link btn-hover-lift">
+            <span>My Courses</span>
+          </a>
+          <a href="browse-courses.html" class="sidebar-link active btn-hover-lift">
+            <span>Browse Courses</span>
+          </a>
+          <a href="schedule.html" class="sidebar-link btn-hover-lift">
+            <span>Schedule</span>
+          </a>
+          <a href="messages.html" class="sidebar-link btn-hover-lift">
+            <span>Messages</span>
+          </a>
+          <a href="certificates.html" class="sidebar-link btn-hover-lift">
+            <span>Certificates</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <button type="button" class="sidebar-logout-btn action-logout btn-hover-lift" title="Log out of your account">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <div class="app-main">
+      <header class="app-header">
+        <div>
+          <h1 id="headerGreetingTitle" class="header-greeting-title">Browse Courses</h1>
+          <p class="header-greeting-sub">Explore new skills, technologies, and certifications.</p>
+        </div>
+
+        <div class="header-right">
+          <button type="button" id="notificationBell" class="notification-bell btn-hover-lift" aria-label="Notifications" title="Notifications">
+            <svg class="bell-icon-svg" viewBox="0 0 24 24">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+            <span class="notification-badge"></span>
+          </button>
+
+          <div class="user-avatar-container">
+            <div id="userAvatar" class="user-avatar btn-hover-lift" role="button" title="Account Menu">S</div>
+            <div id="userMenuDropdown" class="user-menu-dropdown">
+              <div class="user-menu-header">
+                <div id="menuUserName" class="user-menu-name">Sarah</div>
+                <div id="menuUserEmail" class="user-menu-email">sarah@example.com</div>
+              </div>
+              <a href="dashboard.html" class="user-menu-item">Dashboard</a>
+              <a href="my-courses.html" class="user-menu-item">My Courses</a>
+              <button type="button" class="user-menu-item logout-action action-logout">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="placeholder-content">
+        <div class="placeholder-card">
+          <div class="placeholder-icon">📚</div>
+          <h2 class="placeholder-title">Course Catalog</h2>
+          <p class="placeholder-desc">Discover curated paths in Fullstack Development, Cloud Architecture, AI & Machine Learning, and Design Systems.</p>
+          <a href="my-courses.html" class="btn-primary btn-hover-lift">Go to My Courses</a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

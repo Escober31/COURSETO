@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — COURSETO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+</head>
+<body class="wallpaper-bg">
+
+  <!-- Main App Window Frame matching COURSETO website page 2.png -->
+  <div class="app-container">
+    
+    <!-- Left Sidebar -->
+    <aside class="app-sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <img src="assets/logo.jpg" alt="COURSETO Logo" class="sidebar-logo-img">
+          <span class="sidebar-brand-name">COURSETO</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main Navigation">
+          <a href="dashboard.html" class="sidebar-link active btn-hover-lift">
+            <span>Dashboard</span>
+          </a>
+          <a href="my-courses.html" class="sidebar-link btn-hover-lift">
+            <span>My Courses</span>
+          </a>
+          <a href="browse-courses.html" class="sidebar-link btn-hover-lift">
+            <span>Browse Courses</span>
+          </a>
+          <a href="schedule.html" class="sidebar-link btn-hover-lift">
+            <span>Schedule</span>
+          </a>
+          <a href="messages.html" class="sidebar-link btn-hover-lift">
+            <span>Messages</span>
+          </a>
+          <a href="certificates.html" class="sidebar-link btn-hover-lift">
+            <span>Certificates</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <button type="button" class="sidebar-logout-btn action-logout btn-hover-lift" title="Log out of your account">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <div class="app-main">
+      
+      <!-- Top Header -->
+      <header class="app-header">
+        <div>
+          <!-- Dynamic greeting: "Welcome Back! (Nickname)" -->
+          <h1 id="headerGreetingTitle" data-dynamic-greeting="true" class="header-greeting-title">Welcome Back! Student</h1>
+          <p class="header-greeting-sub">Continue learning and reach your goals.</p>
+        </div>
+
+        <div class="header-right">
+          <!-- Notification Bell -->
+          <button type="button" id="notificationBell" class="notification-bell btn-hover-lift" aria-label="Notifications" title="Notifications">
+            <svg class="bell-icon-svg" viewBox="0 0 24 24">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+            <span class="notification-badge"></span>
+          </button>
+
+          <!-- Circular User Avatar with First Letter of Nickname -->
+          <div class="user-avatar-container">
+            <div id="userAvatar" class="user-avatar btn-hover-lift" role="button" aria-haspopup="true" aria-expanded="false" title="Account Menu">
+              S
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div id="userMenuDropdown" class="user-menu-dropdown">
+              <div class="user-menu-header">
+                <div id="menuUserName" class="user-menu-name">Sarah</div>
+                <div id="menuUserEmail" class="user-menu-email">sarah@example.com</div>
+              </div>
+              <a href="my-courses.html" class="user-menu-item">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                My Courses
+              </a>
+              <a href="#settings" class="user-menu-item" onclick="alert('Account settings feature coming soon.'); return false;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+                Settings
+              </a>
+              <button type="button" class="user-menu-item logout-action action-logout">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Grid Content matching COURSETO website page 2.png -->
+      <main class="dashboard-content-body">
+        
+        <!-- Left Section -->
+        <div class="dash-left-col">
+          
+          <!-- Statistics Cards: Enrolled, Complete, Learning -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-card-label">Enrolled</span>
+              <span class="stat-card-value">4</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card-label">Complete</span>
+              <span class="stat-card-value">2</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card-label">Learning</span>
+              <span class="stat-card-value">34 hours</span>
+            </div>
+          </div>
+
+          <!-- Continue Learning Card -->
+          <div class="continue-learning-section">
+            <h2 class="section-title">Continue Learning</h2>
+
+            <div class="continue-card">
+              <h3 class="continue-course-title">Web Development Fundamentals</h3>
+              <p class="continue-lesson-info">Lesson 8 of 12</p>
+
+              <div class="continue-progress-row">
+                <div class="progress-track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width: 72%;"></div>
+                </div>
+                <span class="progress-percentage">72%</span>
+                <button type="button" class="btn-primary btn-hover-lift action-continue-course">
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: My Courses -->
+        <div class="dash-right-col">
+          <h2 class="section-title">My Courses</h2>
+
+          <div class="courses-vertical-list">
+            <!-- Course 1 -->
+            <div class="course-mini-card">
+              <h3 class="course-mini-name">Course 1</h3>
+              <div class="course-mini-progress-row">
+                <div class="progress-track-sm" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width: 72%;"></div>
+                </div>
+                <span class="progress-percentage-sm">72%</span>
+              </div>
+              <button type="button" class="btn-card btn-hover-lift action-continue-course">
+                Continue
+              </button>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-mini-card">
+              <h3 class="course-mini-name">Course 2</h3>
+              <div class="course-mini-progress-row">
+                <div class="progress-track-sm" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width: 35%;"></div>
+                </div>
+                <span class="progress-percentage-sm">35%</span>
+              </div>
+              <button type="button" class="btn-card btn-hover-lift action-continue-course">
+                Continue
+              </button>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-mini-card">
+              <h3 class="course-mini-name">Course 3</h3>
+              <div class="course-mini-progress-row">
+                <div class="progress-track-sm" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-fill" style="width: 53%;"></div>
+                </div>
+                <span class="progress-percentage-sm">53%</span>
+              </div>
+              <button type="button" class="btn-card btn-hover-lift action-continue-course">
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
